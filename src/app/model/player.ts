@@ -1,6 +1,6 @@
-import { Position } from './position';
-import { School } from './school';
-export interface Player {
+import { IPosition } from './position';
+import { ISchool } from './school';
+export interface IPlayer {
   cfl_central_id: number;
   stats_inc_id: number;
   first_name: string;
@@ -13,6 +13,6 @@ export interface Player {
   lrookie_year: number;
   foreign_player: boolean;
   image_url: string;
-  position: Position;
-  school: School;
+  position: IPosition;
+  school: ISchool;
 }

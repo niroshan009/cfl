@@ -1,9 +1,18 @@
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { IPlayer } from '../model/player';
+import { HttpClient } from '@angular/common/http';
+import { map } from 'rxjs/operators';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class DataService {
+  constructor(private http: HttpClient) {}
 
-  constructor() { }
+  getPlayers(pageNumber: number, pageSize: number): Observable<IPlayer[]> {
+    let api: string = '';
+    let players: IPlayer[];
+    return this.http.get<any>(api).pipe(map((data) => (players = data.data)));
+  }
 }
