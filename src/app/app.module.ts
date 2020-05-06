@@ -4,9 +4,10 @@ import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { PlayerListComponent } from './player/player-list.component';
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, PlayerListComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule],
   providers: [],
   bootstrap: [AppComponent],
